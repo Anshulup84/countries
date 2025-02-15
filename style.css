@@ -7,6 +7,21 @@ body {
     font-family: Nunito, sans-serif;
 }
 
+.header-container{
+    box-shadow: 0 4px 4px 0.1px rgba(0, 0, 0, 0.2);
+    padding-inline: 24px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-inline: auto;
+   
+    
+}
+
 .title {
     font-weight: 800;
 }
