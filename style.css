@@ -25,3 +25,28 @@ body {
 .title {
     font-weight: 800;
 }
+
+.countries-container {
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.country-card{
+    width: 250px;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 5px 4px 0.1px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: 24px;
+    margin-block: 16px;
+}
+
+.card-text {
+    padding-inline: 16px;
+}
+
+.country-card img {
+    width: 100%;
+}
