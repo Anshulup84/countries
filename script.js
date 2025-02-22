@@ -10,7 +10,7 @@ fetch("https://restcountries.com/v3.1/all")
       countryCard.href = `./country.html?name=${country.name.common}`;
 
       countryCard.innerHTML = `
-                        <img src="${country.flags.svg}" alt="flag">
+                        <img src="${country.flags.svg}" alt="${country.name.common} Flag">
                         <div class="card-text">
                             <h3 class="card-title">${country.name.common}</h3>
                             <p><b>Population: </b>${country.population.toLocaleString(
