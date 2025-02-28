@@ -19,14 +19,22 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`).then((
     countryNameH1.innerText = country.name.common
     population.innerText = country.population.toLocaleString('en-In')
     region.innerText = country.region
-    subRegion.innerText = country.subregion
-    capital.innerText = country.capital?.[0]
+    
+    
     topLevelDomain.innerText = country.tld.join(', ')
 
+    if(country.capital){
+        capital.innerText = country.capital?.[0]
+    }
+
+    if(country.subregion){
+        subRegion.innerText = country.subregion
+    }
 
     if(country.name.nativeName) {
         nativeName.innerText = Object.values(country.name.nativeName)[0].common
     }
+
     else {
         nativeName.innerText = country.name.common
     }
