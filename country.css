@@ -31,18 +31,21 @@
 
 .border-countries {
     margin-top: 48px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 8px;
 }
 
 .border-countries a {
     padding: 4px 16px;
     box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    margin-inline: 4px;
     font-size: 14px;
 
 }
 
-@media(max-width: 840px) {
+@media(max-width: 940px) {
     .country-details {
         flex-direction: column;
         align-items: flex-start;
