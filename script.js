@@ -1,7 +1,18 @@
 const countriesContainer = document.querySelector(".countries-container");
+const filterByRegion = document.querySelector(".filter-by-region")
+
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
-  .then((data) => {
+  .then(renderCountries);
+
+  filterByRegion.addEventListener('change', (e) => {
+    fetch(`https://restcountries.com/v3.1/region/${filterByRegion.value}`)
+  .then((res) => res.json())
+  .then(renderCountries)
+  })
+
+  function renderCountries(data) {
+    countriesContainer.innerHTML = ''
     data.forEach((country) => {
       console.log(country);
 
@@ -24,4 +35,4 @@ fetch("https://restcountries.com/v3.1/all")
 
       countriesContainer.append(countryCard);
     });
-  });
+  }
