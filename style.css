@@ -27,8 +27,6 @@ a {
     justify-content: space-between;
     max-width: 1200px;
     margin-inline: auto;
-   
-    
 }
 
 .title {
@@ -36,7 +34,6 @@ a {
 }
 
 .countries-container {
-
     max-width: 1200px;
     margin-top: 16px;
     margin-inline: auto;
@@ -76,9 +73,12 @@ a {
 
 .country-card img {
     width: 100%;
+
 }
 
 .search-filter-container{
+    max-width: 1200px;
+    margin-inline: auto;
     margin-top: 16px;
     margin-bottom: 48px;
     display: flex;
@@ -101,7 +101,7 @@ a {
     border: none;
     outline: none;
     padding: 16px;
-    
+    width: 90%;
 }
 
 .search-container input::placeholder {
