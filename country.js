@@ -10,6 +10,7 @@ const topLevelDomain = document.querySelector('.top-level-domain')
 const currencies = document.querySelector('.currencies')
 const languages = document.querySelector('.languages')
 const borderCountries = document.querySelector('.border-countries')
+const themeChanger = document.querySelector(".theme-changer")
 
 
 fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`).then((res) => 
@@ -62,3 +63,32 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`).then((
         });
     }
 })
+
+const toggleTheme = () => {
+    document.body.classList.toggle("dark");
+  
+   
+    const isDarkMode = document.body.classList.contains("dark");
+    localStorage.setItem("darkMode", isDarkMode);
+  
+  
+    updateThemeButton(isDarkMode);
+  };
+  
+  
+  const updateThemeButton = (isDark) => {
+    if (isDark) {
+        themeChanger.innerHTML = '<i class="fa-solid fa-sun"></i>&nbsp;&nbsp;Light Mode';
+    } else {
+        themeChanger.innerHTML = '<i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode';
+    }
+  };
+  
+  themeChanger.addEventListener("click", toggleTheme);
+  
+  if (localStorage.getItem("darkMode") === "true") {
+    document.body.classList.add("dark");
+  }
+  
+  updateThemeButton(document.body.classList.contains("dark"));
+  
